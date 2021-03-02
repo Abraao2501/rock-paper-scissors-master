@@ -1,0 +1,67 @@
+/*Options Style*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 2rem;
+}
+main .paperContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 11rem;
+    height: 11rem;
+
+    border-style: outset;
+    border-width: 1.5rem;
+    border-color: var(--Paper-Gradient);
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+}
+main .scissorsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 11rem;
+    height: 11rem;
+
+    border-style: outset;
+    border-width: 1.5rem;
+    border-color: var(--Scissors-Gradient);
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+}
+main .break {
+    width: 100%;
+}
+main .rockContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 11rem;
+    height: 11rem;
+
+    border-style: outset;
+    border-width: 1.5rem;
+    border-color: var(--Rock-Gradient);
+    border-radius: 50%;
+
+    background: white;
+
+    margin-top: 1.2rem;
+
+    cursor: pointer;
+}

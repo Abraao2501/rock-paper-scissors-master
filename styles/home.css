@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--Background);
+
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+:root {
+
+    --Scissors-Gradient: hsl(39, 89%, 49%);
+    --Paper-Gradient: hsl(230, 89%, 62%);
+    --Rock-Gradient: hsl(349, 71%, 52%);
+    
+    --Lizard-Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+    --Cyan:hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+    --Dark-Text: hsl(229, 25%, 31%);
+    --Score-Text: hsl(229, 64%, 46%);
+    --Header-Outline: hsl(217, 16%, 45%);
+
+    --Background: radial-gradient(circle at 100%, hsl(237, 49%, 15%),hsl(214, 47%, 23%));
+}
+/*Header Styles*/
+header{
+    width: 45%;
+    height: 8.5rem;
+    padding: 1rem 1.5rem;
+
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: solid 2px var(--Header-Outline);
+    border-radius: 15px;  
+}
+header p.rockPaperScissors {
+    width: 5rem;
+    color: white;
+    font-size: 2rem;
+}
+header div.scoreContainer {
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 7.5rem;
+    height: 6rem;
+
+    border-radius: 15px; 
+}
+header div.scoreContainer p:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Dark-Text);
+}
+header div.scoreContainer p:last-child {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Dark-Text);
+}
+
+/*Footer button*/
+footer button {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 2.5rem;
+
+    width: 7rem;
+    height: 2.5rem;
+
+    padding: 15px 10px;
+
+    background-color: transparent;
+    color: white;
+
+    border: solid 1px white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+footer button:hover {
+    background-color: white;
+    color: var(--Dark-Text);
+}

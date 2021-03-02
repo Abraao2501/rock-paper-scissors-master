@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/play/select-container.css">
+  
+  
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+
+  <!--container that has the application header-->
+  <header>
+      <p class="rockPaperScissors">
+        Rock
+        Paper
+        Scissors
+      </p>
+      <div class="scoreContainer">
+        <p>SCORE</p>
+        <p class="scoreNumber">12</p>
+      </div>
+  </header>
+
+  <!--selected options-->
+  <main>
+    <section class="YouPicked">
+      <p>YOU PICKED</p>
+      <div class="userOption">
+        <img src="/images/icon-scissors.svg">
+      </div>
+    
+    </section>
+  
+  <div class="result">
+    <p class="winOrLose">YOU LOSE</p>
+    <button type="button">PLAY AGAIN</button>
+  </div>
+
+  <section class="theHousePicked">
+    <p>THE HOUSE PICKED</p>
+    <div class="computerOption">
+      <img src="/images/icon-rock.svg">
+    </div>
+  </section>
+  
+  </main>
+
+   <!--rules button-->
+   <footer>
+    <button type="button">RULES</button>
+  </footer>
+
+  <script src="/scripts/play.js"></script>
+  
+</body>
+</html>

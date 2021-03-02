@@ -1,0 +1,26 @@
+-Html
+
+[ X ] Estruturar o html da página index.html
+    -Html Semântico
+    -Comentários
+
+[ X ] Estruturar o html da página play.html
+    -Html Semântico
+    -Comentários
+
+-Estilizando
+
+[ X ] Adicionar background
+    -Ver cores no style-guide
+
+[ X ] Importar fontes
+    -Ver links de fontes no style-guide
+
+[ X ] Estilizar o header
+    -Centralize todos os elementos da página primeiro
+
+[ X ] Estilizar os containers das opções
+    -Ajustar os gradientes das opções primeiro
+    -Ajustar o layout, fazendo com que uma das opções fique logo abaixo
+  
+

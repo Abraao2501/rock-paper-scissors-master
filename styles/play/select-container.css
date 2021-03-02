@@ -1,0 +1,89 @@
+/*Main Styles*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 80%;
+    margin-top: 3rem;
+}
+main section .userOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12rem;
+    height: 12rem;
+
+    border-style: outset;
+    border-width: 1.5rem;
+    border-color: var(--Scissors-Gradient);
+    border-radius: 50%;
+
+    background: white;
+
+    margin-top: 3rem;
+
+    cursor: pointer;
+}
+main section .computerOption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12rem;
+    height: 12rem;
+
+    border-style: outset;
+    border-width: 1.5rem;
+    border-color: var(--Rock-Gradient);
+    border-radius: 50%;
+
+    background: white;
+
+    margin-top: 3rem;
+
+    cursor: pointer;
+}
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section p {
+    color: white;
+    font-size: 1rem;
+}
+
+main .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .result p.winOrLose {
+    font-size: 3rem;
+    color: white;
+}
+main .result button {
+    background: white;
+    
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(229, 25%, 31%);
+
+    width: 12rem;
+    height: 3rem;
+
+    margin-top: 1.2rem;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+main .result button:hover {
+    background: transparent;
+    color: white;
+    border: solid 2px white;
+}
