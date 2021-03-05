@@ -2,9 +2,14 @@
 const paper = document.querySelector(".paperContainer");
 const rock = document.querySelector(".rockContainer");
 const scissors = document.querySelector(".scissorsContainer");
+const scoreNumber = document.querySelector(".scoreNumber");
 
 //Agrupando todos os elementos em um array
 const options = [paper, rock, scissors];
+
+//Score
+let score = 0;
+scoreNumber.innerHTML = score;
 
 //Opção do usuário e computador
 let userOption = 0;
@@ -40,11 +45,15 @@ function comparison() {
   //Papel+Tesoura
   else if (computerOption == options[0] && userOption === options[2]) {
     console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    score = score + 1;
+    scoreNumber.innerHTML = score;
   }
 
   //Pedra+Papel
   else if (computerOption == options[1] && userOption === options[0]) {
     console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    score = score + 1;
+    scoreNumber.innerHTML = score;
   }
 
   //Pedra+Tesoura
@@ -60,6 +69,8 @@ function comparison() {
   //Tesoura+Pedra
   else if (computerOption == options[2] && userOption === options[1]) {
     console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    score = score + 1;
+    scoreNumber.innerHTML = score;
   }
 }
 
@@ -79,3 +90,5 @@ scissors.addEventListener("click", function scissorClick() {
   randomOption();
   comparison();
 });
+
+export default paper;
