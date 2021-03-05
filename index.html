@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/styles/index/select-container.css">
   
   <title>Rock, Paper, Scissors</title>
+
 </head>
 <body>
 
@@ -31,20 +32,26 @@
   <!--user play options-->
   <main>
 
-    <div class="paperContainer">
-      <img src="/images/icon-paper.svg" alt="Paper" class="paper">
-    </div>
+    <section class="paperContainer">
+      <div class="paperContainerStyle">
+        <img src="/images/icon-paper.svg" alt="Paper" class="paper">
+      </div>
+    </section>
 
-    <div class="scissorsContainer">
-      <img src="/images/icon-scissors.svg" alt="Scissors" class="scissors">
-    </div>
+    <section class="scissorsContainer">
+      <div class="scissorsContainerStyle">
+        <img src="/images/icon-scissors.svg" alt="Scissors" class="scissors">
+      </div>
+    </section>
+
 
     <div class="break"></div> <!--Line Break-->
 
-    <div class="rockContainer">
-      <img src="/images/icon-rock.svg" alt="Rock" class="rock">
-    </div>
-
+    <section class="rockContainer">
+      <div class="rockContainerStyle">
+        <img src="/images/icon-rock.svg" alt="Rock" class="rock">
+      </div>
+    </section>
   </main>
 
   <!--rules button-->
@@ -52,7 +59,8 @@
     <button type="button">RULES</button>
   </footer>
 
-  <script src="/scripts/index.js"></script>
-  <!--<img src="/images/bg-triangle.svg" alt="Triangle">-->
+ 
+   
+  <script src="/scripts/play.js" type="module" defer></script>
 </body>
 </html>

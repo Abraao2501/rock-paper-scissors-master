@@ -8,7 +8,7 @@ main {
 
     margin-top: 2rem;
 }
-main .paperContainer {
+main .paperContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ main .paperContainer {
     cursor: pointer;
 
 }
-main .scissorsContainer {
+main .scissorsContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@ main .scissorsContainer {
 main .break {
     width: 100%;
 }
-main .rockContainer {
+main .rockContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
