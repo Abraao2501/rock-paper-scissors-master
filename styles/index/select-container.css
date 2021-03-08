@@ -6,9 +6,9 @@ main {
     align-items: center;
     justify-content: space-around;
 
-    margin-top: 2rem;
+    margin-top: 12rem;
 }
-main .paperContainerStyle {
+.paperContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@ main .paperContainerStyle {
     cursor: pointer;
 
 }
-main .scissorsContainerStyle {
+.scissorsContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,10 +43,10 @@ main .scissorsContainerStyle {
 
     cursor: pointer;
 }
-main .break {
+.break {
     width: 100%;
 }
-main .rockContainerStyle {
+.rockContainerStyle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +61,7 @@ main .rockContainerStyle {
 
     background: white;
 
-    margin-top: 1.2rem;
+    
 
     cursor: pointer;
 }

@@ -2,12 +2,19 @@
 const paper = document.querySelector(".paperContainer");
 const rock = document.querySelector(".rockContainer");
 const scissors = document.querySelector(".scissorsContainer");
+
+const resultContainer = document.querySelector(".result-container");
+const winOrLose = document.querySelector(".winOrLose");
+const resultYouPicked = document.querySelector(".you-picked");
+const resultComputerPicked = document.querySelector(".the-house-picked");
+const playAgainButton = document.querySelector(".playAgain");
+
 const scoreNumber = document.querySelector(".scoreNumber");
 
 //Agrupando todos os elementos em um array
 const options = [paper, rock, scissors];
 
-//Score
+//Score Count
 let score = 0;
 scoreNumber.innerHTML = score;
 
@@ -30,65 +37,117 @@ function randomOption() {
   computerOption = options[numberRandom()];
 }
 
+//Exibindo as ecolhas na tela
+function resultDisplay() {
+  resultYouPicked.outerHTML = userOption.outerHTML;
+  resultComputerPicked.outerHTML = computerOption.outerHTML;
+}
+
 //Comparação das opções escolhidas
 function comparison() {
   //Empate
   if (computerOption == userOption) {
-    console.log("Stalemate" + computerOption.outerHTML + userOption.outerHTML);
+    resultDisplay();
+    winOrLose.innerHTML = "Draw";
   }
 
   //Papel+Pedra
   else if (computerOption == options[0] && userOption === options[1]) {
-    console.log("You lose" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Lose";
+    resultDisplay();
   }
 
   //Papel+Tesoura
   else if (computerOption == options[0] && userOption === options[2]) {
-    console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Win!";
+    resultDisplay();
     score = score + 1;
     scoreNumber.innerHTML = score;
   }
 
   //Pedra+Papel
   else if (computerOption == options[1] && userOption === options[0]) {
-    console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Win!";
+    resultDisplay();
     score = score + 1;
     scoreNumber.innerHTML = score;
   }
 
   //Pedra+Tesoura
   else if (computerOption == options[1] && userOption === options[2]) {
-    console.log("You Lose" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Lose!";
+    resultDisplay();
   }
 
   //Tesoura+Papel
   else if (computerOption == options[2] && userOption === options[0]) {
-    console.log("You Lose" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Lose!";
+    resultDisplay();
   }
 
   //Tesoura+Pedra
   else if (computerOption == options[2] && userOption === options[1]) {
-    console.log("You Win" + computerOption.outerHTML + userOption.outerHTML);
+    winOrLose.innerHTML = "You Win!";
+    resultDisplay();
     score = score + 1;
     scoreNumber.innerHTML = score;
   }
 }
+
+//Colocsndo o container de resultados visível
+function resultContainerDisplay() {
+  resultContainer.style.display = "flex";
+}
+
+//Colocando o container de resultados invisível
+function resultContainerDisplayNone() {
+  resultContainer.style.display = "none";
+}
+
+//Scroll para o fim do documento
+function scrollToBotton() {
+  window.scrollTo(0, 1000);
+}
+
+//Scroll para o topo do documento
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+
+//Botão de tentar novamente
+playAgainButton.addEventListener("click", function playAgain() {
+  userOption = 0;
+  computerOption = 0;
+
+  resultContainerDisplayNone();
+  scrollToTop();
+
+  let resultYouPickedInitial = document.querySelector(".you-picked");
+  let resultComputerPickedInitial = document.querySelector(".the-house-picked");
+
+  resultYouPicked.outerHTML = resultYouPickedInitial.outerHTML;
+  resultComputerPicked.outerHTML = resultComputerPickedInitial.outerHTML;
+});
 
 //Eventos de clique || Escolha do usuário
 paper.addEventListener("click", function paperClick() {
   userOption = options[0];
   randomOption();
   comparison();
+  resultContainerDisplay();
+  scrollToBotton();
 });
 rock.addEventListener("click", function rockClick() {
   userOption = options[1];
   randomOption();
   comparison();
+  resultContainerDisplay();
+  scrollToBotton();
 });
 scissors.addEventListener("click", function scissorClick() {
   userOption = options[2];
   randomOption();
   comparison();
+  resultContainerDisplay();
+  scrollToBotton();
 });
-
-export default paper;

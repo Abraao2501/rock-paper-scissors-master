@@ -1,0 +1,63 @@
+.result-container {
+    display: none;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.you-picked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 5rem;
+    
+}
+.the-house-picked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-left: 5rem;
+}
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.winOrLose {
+    font-size: 1.5rem;
+    color: white;
+}
+.playAgain {
+    width: 10rem;
+    height: 2.5rem;
+
+    padding: 15px 10px;
+
+    background-color: white;
+    color: var(--Dark-Text);
+
+    border: solid 1px white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.5s;
+
+    margin-top: 1.5rem;
+
+    font-weight: 700;
+}
+.playAgain:hover {
+    background-color: transparent;
+    color: white;
+}

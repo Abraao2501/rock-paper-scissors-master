@@ -31,11 +31,13 @@ body {
 }
 /*Header Styles*/
 header{
+    position: fixed;
+    top: 2rem;
+
     width: 45%;
     height: 8.5rem;
     padding: 1rem 1.5rem;
 
-    margin-top: 2rem;
 
     display: flex;
     align-items: center;
@@ -76,7 +78,7 @@ header div.scoreContainer p:last-child {
 
 /*Footer button*/
 footer button {
-    position: absolute;
+    position: fixed;
     right: 2.5rem;
     bottom: 2.5rem;
 
