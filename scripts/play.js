@@ -21,6 +21,7 @@ function updateScoreLocalStorage() {
   localStorage.setItem("score", score);
 }
 
+//Score Count
 if (typeof localStorage.getItem("score") === "object") {
   var score = 0;
   localStorage.setItem("score", 0);
@@ -29,7 +30,6 @@ if (typeof localStorage.getItem("score") === "object") {
   var score = parseInt(localStorage.getItem("score"));
 }
 
-//Score Count
 function scoreCount() {
   score = score + 1;
 

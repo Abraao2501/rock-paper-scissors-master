@@ -1,0 +1,61 @@
+@media(max-width:780px){
+    * {
+        font-size: 14px;
+    }
+
+    header {
+        width: 70%;
+    }
+}
+@media(max-width:600px) {
+    * {
+        font-size: 12px;
+    }
+}
+@media(max-width:500px) {
+    header p.rockPaperScissors {
+        width: 4rem;
+        font-size: 1.5rem;
+    }
+    header div.scoreContainer {
+        width: 6.5rem;
+        height: 6rem;
+    
+        border-radius: 15px; 
+    }
+    header div.scoreContainer p:first-child {
+        font-size: 1rem;
+    }
+    header div.scoreContainer p:last-child {
+        font-size: 3rem;
+
+    }
+}
+@media(max-width:425px) {
+    header {
+        width: 80%;
+    }
+}
+@media(max-width:344px) {
+    header {
+        width: 85%;
+        height: 8rem;
+    }
+    header p.rockPaperScissors {
+        width: 3.5rem;
+        font-size: 1.4rem;
+    }
+    header div.scoreContainer {
+        width: 6rem;
+        height: 5rem;
+    
+        border-radius: 15px; 
+    }
+    header div.scoreContainer p:first-child {
+        font-size: 1rem;
+    }
+    header div.scoreContainer p:last-child {
+        font-size: 2.5rem;
+
+    }
+}
