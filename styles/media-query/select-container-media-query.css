@@ -13,3 +13,10 @@
        margin-top: 1.7rem;
     }
 }
+@media(max-width:394px) {
+    .scissorsContainerStyle,
+    .rockContainerStyle,
+    .paperContainerStyle {
+       margin-top: 2.5rem;
+    }
+}

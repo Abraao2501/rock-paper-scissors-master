@@ -1,0 +1,27 @@
+@media(max-width:600px) {
+    .result-container {
+        margin-top: 11rem;
+    }
+    
+}
+@media(max-width:500px) {
+    .result {
+        margin: 0 2.5rem 0 2.5rem;
+    }
+}
+@media(max-width:430px) {
+    .result {
+        margin: 0 1.5rem 0 1.5rem;
+    }
+    .playAgain {
+        width: 8.5rem;
+        height: 2rem;
+    
+        padding: 13px 10px;
+    }
+}
+@media(max-width:394px) {
+    * {
+        font-size: 11px;
+    }
+}

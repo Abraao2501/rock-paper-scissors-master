@@ -61,7 +61,9 @@ function randomOption() {
 //Exibindo as ecolhas na tela
 function resultDisplay() {
   resultYouPicked.outerHTML = userOption.outerHTML;
+  //resultYouPicked.classList.add("resultYouPicked");
   resultComputerPicked.outerHTML = computerOption.outerHTML;
+  // resultComputerPicked.classList.add("resultComputerPicked");
 }
 
 //Comparação das opções escolhidas
@@ -69,12 +71,12 @@ function comparison() {
   //Empate
   if (computerOption == userOption) {
     resultDisplay();
-    winOrLose.innerHTML = "Draw";
+    winOrLose.innerHTML = "Draw!";
   }
 
   //Papel+Pedra
   else if (computerOption == options[0] && userOption === options[1]) {
-    winOrLose.innerHTML = "You Lose";
+    winOrLose.innerHTML = "You Lose!";
     resultDisplay();
   }
 
