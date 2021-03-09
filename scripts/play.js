@@ -3,6 +3,8 @@ const paper = document.querySelector(".paperContainer");
 const rock = document.querySelector(".rockContainer");
 const scissors = document.querySelector(".scissorsContainer");
 
+const main = document.querySelector("main");
+
 const resultContainer = document.querySelector(".result-container");
 const winOrLose = document.querySelector(".winOrLose");
 const resultYouPicked = document.querySelector(".you-picked");
@@ -14,9 +16,28 @@ const scoreNumber = document.querySelector(".scoreNumber");
 //Agrupando todos os elementos em um array
 const options = [paper, rock, scissors];
 
+//Armazenando os dados do Score no Local Storage
+function updateScoreLocalStorage() {
+  localStorage.setItem("score", score);
+}
+
+if (typeof localStorage.getItem("score") === "object") {
+  var score = 0;
+  localStorage.setItem("score", 0);
+  scoreNumber.innerHTML = localStorage.getItem("score");
+} else if (typeof localStorage.getItem("score") === "string") {
+  var score = parseInt(localStorage.getItem("score"));
+}
+
 //Score Count
-let score = 0;
-scoreNumber.innerHTML = score;
+function scoreCount() {
+  score = score + 1;
+
+  updateScoreLocalStorage();
+  scoreNumber.innerHTML = localStorage.getItem("score");
+}
+
+scoreNumber.innerHTML = localStorage.getItem("score");
 
 //Opção do usuário e computador
 let userOption = 0;
@@ -61,16 +82,14 @@ function comparison() {
   else if (computerOption == options[0] && userOption === options[2]) {
     winOrLose.innerHTML = "You Win!";
     resultDisplay();
-    score = score + 1;
-    scoreNumber.innerHTML = score;
+    scoreCount();
   }
 
   //Pedra+Papel
   else if (computerOption == options[1] && userOption === options[0]) {
     winOrLose.innerHTML = "You Win!";
     resultDisplay();
-    score = score + 1;
-    scoreNumber.innerHTML = score;
+    scoreCount();
   }
 
   //Pedra+Tesoura
@@ -89,8 +108,7 @@ function comparison() {
   else if (computerOption == options[2] && userOption === options[1]) {
     winOrLose.innerHTML = "You Win!";
     resultDisplay();
-    score = score + 1;
-    scoreNumber.innerHTML = score;
+    scoreCount();
   }
 }
 
@@ -104,29 +122,21 @@ function resultContainerDisplayNone() {
   resultContainer.style.display = "none";
 }
 
-//Scroll para o fim do documento
-function scrollToBotton() {
-  window.scrollTo(0, 1000);
+//Colocando o container main invisível
+function mainDisplayNone() {
+  main.style.display = "none";
 }
 
-//Scroll para o topo do documento
-function scrollToTop() {
-  window.scrollTo(0, 0);
+//Colocando o container main visível
+function mainDisplayFlex() {
+  main.style.display = "flex";
 }
 
 //Botão de tentar novamente
 playAgainButton.addEventListener("click", function playAgain() {
-  userOption = 0;
-  computerOption = 0;
-
-  resultContainerDisplayNone();
-  scrollToTop();
-
-  let resultYouPickedInitial = document.querySelector(".you-picked");
-  let resultComputerPickedInitial = document.querySelector(".the-house-picked");
-
-  resultYouPicked.outerHTML = resultYouPickedInitial.outerHTML;
-  resultComputerPicked.outerHTML = resultComputerPickedInitial.outerHTML;
+  document.location.reload(true);
+  scoreLocalStorage();
+  mainDisplayFlex();
 });
 
 //Eventos de clique || Escolha do usuário
@@ -135,19 +145,19 @@ paper.addEventListener("click", function paperClick() {
   randomOption();
   comparison();
   resultContainerDisplay();
-  scrollToBotton();
+  mainDisplayNone();
 });
 rock.addEventListener("click", function rockClick() {
   userOption = options[1];
   randomOption();
   comparison();
   resultContainerDisplay();
-  scrollToBotton();
+  mainDisplayNone();
 });
 scissors.addEventListener("click", function scissorClick() {
   userOption = options[2];
   randomOption();
   comparison();
   resultContainerDisplay();
-  scrollToBotton();
+  mainDisplayNone();
 });
