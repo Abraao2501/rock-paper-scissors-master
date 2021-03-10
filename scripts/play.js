@@ -45,7 +45,7 @@ let computerOption = 0;
 
 //Escolha do computador, gerada de forma aleatória
 function randomOption() {
-  //Função para gerar um número random entre 0 e 2
+  //Função para gerar um número random entre as opções disponíveis
   function numberRandom() {
     let numberGeneration = Math.floor(
       Math.random() * (options.length - 1 + 1) + 0
