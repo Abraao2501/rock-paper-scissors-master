@@ -48,4 +48,6 @@
 .playAgain:hover {
     background-color: transparent;
     color: white;
+
+    zoom: 1.1;
 }

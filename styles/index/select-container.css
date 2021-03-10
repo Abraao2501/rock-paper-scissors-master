@@ -7,6 +7,10 @@ main {
     justify-content: space-around;
 
     margin-top: 13.5rem;
+
+    animation-name: load;
+    animation-duration: 0.8s;
+    animation-delay: 0.1s;
 }
 .paperContainerStyle {
     display: flex;
@@ -23,9 +27,11 @@ main {
 
     background: white;
 
+    transition-duration: 0.3s;
     cursor: pointer;
 
 }
+
 .scissorsContainerStyle {
     display: flex;
     align-items: center;
@@ -41,6 +47,7 @@ main {
 
     background: white;
 
+    transition-duration: 0.3s;
     cursor: pointer;
 }
 .break {
@@ -62,6 +69,48 @@ main {
     background: white;
 
     
-
+    transition-duration: 0.3s;
     cursor: pointer;
+}
+
+.paperContainerStyle:hover {
+    animation-name: zoom;
+    animation-duration: 0.5s;
+
+    zoom: 1.1;
+    opacity: 0.8;
+    
+ 
+    box-shadow: 5px 2px 2px hsla(0, 0%, 53%, 0.027);
+}
+.rockContainerStyle:hover {
+    animation-name: zoom;
+    animation-duration: 0.5s;
+
+    zoom: 1.1;
+    opacity: 0.8;
+
+
+    box-shadow: 5px 2px 2px hsla(0, 0%, 53%, 0.027);
+}
+.scissorsContainerStyle:hover {
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    
+    zoom: 1.1;
+    opacity: 0.8;
+
+    box-shadow: 5px 2px 2px hsla(0, 0%, 53%, 0.027);
+}
+
+@keyframes zoom {
+    from {
+        transform: rotateZ(0);
+    
+        
+    }
+    to {
+        transform: rotateZ(360deg);
+ 
+    }
 }

@@ -45,6 +45,11 @@ header{
 
     border: solid 2px var(--Header-Outline);
     border-radius: 15px;  
+
+    animation-name: load;
+    animation-duration: 0.8s;
+    -webkit-transition: all 0.8s cubic-bezier(0, 0, 1, 1);
+    transition: all 0.8s cubic-bezier(0, 0, 1, 1);
 }
 header p.rockPaperScissors {
     width: 5rem;
@@ -99,8 +104,29 @@ footer button {
 
     cursor: pointer;
     transition: 0.5s;
+
+    animation-name: load;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+
+    -webkit-transition: all 0.8s cubic-bezier(0, 0, 1, 1);
+    transition: all 0.8s cubic-bezier(0, 0, 1, 1);
+
+   
 }
 footer button:hover {
     background-color: white;
     color: var(--Dark-Text);
+}
+
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: translateY(-2rem);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
 }
